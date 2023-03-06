@@ -1,0 +1,17 @@
+[Unit]
+Description=Telegram ChatGPT bot service example
+After=docker.service
+
+[Service]
+Type=simple
+Restart=on-abort
+User=root
+Group=root
+WorkingDirectory=/usr/local/chatgpt_telegram_bot
+
+ExecStart=/usr/bin/docker compose --env-file config/config.env up 
+ExecStop=/usr/bin/docker compose --env-file config/config.env stop
+# ExecStop=/bin/kill $MAINPID
+
+[Install]
+WantedBy=multi-user.target
