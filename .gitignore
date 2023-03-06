@@ -129,6 +129,7 @@ dmypy.json
 .pyre/
 
 # Custom
+mongodb/
 config/config.yml
 config/config.env
 
