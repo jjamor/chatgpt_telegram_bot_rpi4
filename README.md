@@ -55,7 +55,19 @@ mv config/config.example.env config/config.env
 🔥 And now **run**:
 
 ```bash
-docker-compose --env-file config/config.env up --build
+docker-compose --env-file config/config.env build --no-cache
+```
+
+then, you can use the image to generate initial database (file db.sqlite):
+
+```bash 
+docker run --rm -v $PWD:/code -ti chatgpt_telegram_bot_rpi4_sqlite-chatgpt_telegram_bot:latest python bot/models.py
+```
+
+finally, launch the service:
+
+```bash
+docker-compose --env-file config/config.env up
 ```
 
 ## References

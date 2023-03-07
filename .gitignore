@@ -129,8 +129,8 @@ dmypy.json
 .pyre/
 
 # Custom
-mongodb/
 config/config.yml
 config/config.env
 
 docker-compose.dev.yml
+db.sqlite

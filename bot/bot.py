@@ -117,7 +117,7 @@ async def message_handle(update: Update, context: CallbackContext, message=None,
         )
 
         # update user data
-        new_dialog_message = {"user": message, "bot": answer, "date": datetime.now()}
+        new_dialog_message = {"user": message, "bot": answer, "date": datetime.now().strftime("%Y-%m-%d %H:%M:%s")}
         db.set_dialog_messages(
             user_id,
             db.get_dialog_messages(user_id, dialog_id=None) + [new_dialog_message],
