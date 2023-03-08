@@ -52,23 +52,28 @@ mv config/config.example.yml config/config.yml
 mv config/config.example.env config/config.env
 ```
 
-🔥 And now **run**:
+4. Build docker image:
 
 ```bash
 docker-compose --env-file config/config.env build --no-cache
 ```
 
-then, you can use the image to generate initial database (file db.sqlite):
+5. You should use the image to generate initial database (file db.sqlite):
 
 ```bash 
 docker run --rm -v $PWD:/code -ti chatgpt_telegram_bot_rpi4_sqlite-chatgpt_telegram_bot:latest python bot/models.py
 ```
+This file will be placed in main directory.
 
-finally, launch the service:
+6. Finally, 🔥 **launch** the service:
 
 ```bash
 docker-compose --env-file config/config.env up
 ```
+
+## Install as a service
+
+A systemd service is provided as a template (file chatgpt_telegram_bot.service). Please adapt it to your environment.
 
 ## References
 1. [*Build ChatGPT from GPT-3*](https://learnprompting.org/docs/applied_prompting/build_chatgpt)
