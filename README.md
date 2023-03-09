@@ -49,16 +49,15 @@ You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/cha
 
 2. Get your Telegram bot token from [@BotFather](https://t.me/BotFather)
 
-3. Edit `config/config.example.yml` to set your tokens and run 2 commands below (*if you're advanced user, you can also edit* `config/config.example.env`):
+3. Edit `config/config.example.yml` to set your tokens and run 2 commands below
 ```bash
 mv config/config.example.yml config/config.yml
-mv config/config.example.env config/config.env
 ```
 
 4. Build docker image:
 
 ```bash
-docker-compose --env-file config/config.env build --no-cache
+docker-compose build --no-cache
 ```
 
 5. You should use the image to generate initial database (file db.sqlite):
@@ -71,7 +70,7 @@ This file will be placed in main directory.
 6. Finally, 🔥 **launch** the service:
 
 ```bash
-docker-compose --env-file config/config.env up
+docker-compose up
 ```
 
 ## Install as a service

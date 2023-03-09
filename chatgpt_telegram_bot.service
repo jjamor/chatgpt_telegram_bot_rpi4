@@ -9,8 +9,8 @@ User=root
 Group=root
 WorkingDirectory=/usr/local/chatgpt_telegram_bot
 
-ExecStart=/usr/bin/docker compose --env-file config/config.env up 
-ExecStop=/usr/bin/docker compose --env-file config/config.env stop
+ExecStart=/usr/bin/docker compose up 
+ExecStop=/usr/bin/docker compose stop
 # ExecStop=/bin/kill $MAINPID
 
 [Install]
