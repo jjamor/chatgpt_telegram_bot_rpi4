@@ -51,8 +51,20 @@ You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/cha
 
 3. Edit `config/config.example.yml` to set your tokens and run 2 commands below
 ```bash
-mv config/config.example.yml config/config.yml
+cp config/config.example.yml config/config.yml
 ```
+
+Also, copy and edit `config/chat_modes.example.yml` to modify chat modes or add your own.
+
+```bash
+cp config/chat_modes.example.yml config/chat_modes.yml
+```
+
+Do you need suggestions about prompts to try? You can practice with some examples you will find here:
+- https://github.com/f/awesome-chatgpt-prompts
+- https://www.awesomegptprompts.com/
+- https://prompthero.com/
+
 
 4. Build docker image:
 
