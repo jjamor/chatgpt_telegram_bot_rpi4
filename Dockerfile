@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.10-alpine
 
 ENV PYTHONFAULTHANDLER=1
 ENV PYTHONUNBUFFERED=1
@@ -12,6 +12,6 @@ RUN mkdir -p /code
 ADD . /code
 WORKDIR /code
 
-RUN apt-get update && apt-get install -y python3 python3-pip python-dev build-essential python3-venv ffmpeg && pip3 install -r requirements.txt && rm -rf /root/.cache && apt-get autoclean && apt-get --purge autoremove -y python-dev gcc &&  rm -rf /tmp/* /var/lib/apt/* /var/cache/* /var/log/*
+RUN apk update && apk add py3-pip py3-virtualenv build-base ffmpeg && pip3 install -r requirements.txt && rm -rf /root/.cache
 
-CMD ["bash"]
+CMD ["sh"]
