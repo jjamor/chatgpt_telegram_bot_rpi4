@@ -89,6 +89,20 @@ docker-compose up
 
 A systemd service is provided as a template (file chatgpt_telegram_bot.service). Please adapt it to your environment.
 
+## Configure command hints (optional, but fancy)
+
+At [@BotFather](https://t.me/BotFather), use command `/mybots` -> select your bot -> Edit Bot -> Edit Commands. Then paste the following text to the BotFather:
+
+```
+retry - Regenerate last bot answer
+new - Start new dialog
+mode - Select chat mode
+balance - Show balance
+help - Show help
+```
+
+After that, you will be able to utilize menu shortcuts or receive prompts while entering commands.
+
 ## ❤️ Top donations
 You can be in this list: <a href="https://github.com/karfly/chatgpt_telegram_bot/blob/main/static/donate/donate.md#%EF%B8%8F-donate" alt="Donate shield"><img src="https://img.shields.io/badge/-Donate-red?logo=undertale" /></a>
 
