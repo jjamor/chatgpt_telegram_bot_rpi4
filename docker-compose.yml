@@ -8,6 +8,8 @@ services:
     restart: always
     volumes:
       - ./db.sqlite:/code/db.sqlite
+      - ./config/chat_modes.yml:/code/config/chat_modes.yml
+      - ./config/config.yml:/code/config/config.yml
     build:
       context: "."
       dockerfile: Dockerfile

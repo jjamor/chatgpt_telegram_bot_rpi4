@@ -1,1 +1,4 @@
 db.sqlite
+config/config.yml
+config/config.env
+config/chat_modes.yml
