@@ -75,7 +75,7 @@ docker-compose build --no-cache
 5. You should use the image to generate initial database (file db.sqlite):
 
 ```bash 
-docker run --rm -v $PWD:/code -ti chatgpt_telegram_bot_rpi4_sqlite-chatgpt_telegram_bot:latest python bot/models.py
+docker run --rm -v $PWD:/code -ti chatgpt_telegram_bot_rpi4-chatgpt_telegram_bot:latest python bot/models.py
 ```
 This file will be placed in main directory.
 
