@@ -13,3 +13,8 @@ services:
     build:
       context: "."
       dockerfile: Dockerfile
+    logging:
+      driver: "journald"
+      options: 
+        tag: "{{.Name}}"
+
