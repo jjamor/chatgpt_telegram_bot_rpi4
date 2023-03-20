@@ -1,7 +1,6 @@
 version: "3"
 
 services:
-
   chatgpt_telegram_bot:
     container_name: chatgpt_telegram_bot
     command: python3 bot/bot.py
@@ -17,4 +16,3 @@ services:
       driver: "journald"
       options: 
         tag: "{{.Name}}"
-
