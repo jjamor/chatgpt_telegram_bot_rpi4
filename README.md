@@ -21,7 +21,7 @@ This repo is ChatGPT re-created with GPT-3.5 LLM as Telegram Bot. **And it works
 You can deploy your own bot, or use mine: [@chatgpt_karfly_bot](https://t.me/chatgpt_karfly_bot)
 
 ## Features
-- Low latency replies (it usually takes about 3-5 seconds) 
+- Low latency replies (it usually takes about 3-5 seconds)
 - No request limits
 - Message streaming (watch demo)
 - Voice message recognition

@@ -92,7 +92,7 @@ class ChatGPT:
                         stream=True,
                         **OPENAI_COMPLETION_OPTIONS
                     )
-                    
+
                     answer = ""
                     async for r_item in r_gen:
                         answer += r_item.choices[0].text
@@ -101,7 +101,7 @@ class ChatGPT:
                     n_used_tokens = self._count_tokens_for_gpt(prompt, answer, model="text-davinci-003")
 
                 answer = self._postprocess_answer(answer)
-                
+
             except openai.error.InvalidRequestError as e:  # too many tokens
                 if len(dialog_messages) == 0:
                     raise ValueError("Dialog messages is reduced to zero, but still has too many tokens to make completion") from e
@@ -132,7 +132,7 @@ class ChatGPT:
 
     def _generate_prompt_messages_for_chatgpt_api(self, message, dialog_messages, chat_mode):
         prompt = CHAT_MODES[chat_mode]["prompt_start"]
-        
+
         messages = [{"role": "system", "content": prompt}]
         for dialog_message in dialog_messages:
             messages.append({"role": "user", "content": dialog_message["user"]})
